@@ -1,18 +1,19 @@
 package hu.petrik.bankiSzolgaltatasok;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Bank {
-    private List<Szamla> szamlaLista;
-
-    public Bank(int maxSzamlaszam) {    }
+    private ArrayList<Szamla> szamlaLista = new ArrayList<Szamla>() {
+    };
 
     public Szamla szamlanyitas(Tulajdonos tulajdonos, int hitelKeret){
         if (hitelKeret > 0){
             HitelSzamla hitelSzamla = new HitelSzamla(tulajdonos, hitelKeret);
+            szamlaLista.add(hitelSzamla);
             return hitelSzamla;
         }else if (hitelKeret == 0){
             MegtakaritasiSzamla megtakaritasiSzamla = new MegtakaritasiSzamla(tulajdonos);
+            szamlaLista.add(megtakaritasiSzamla);
             return megtakaritasiSzamla;
         }else {
             throw new IllegalArgumentException("Hitelkeret nem lehet kisebb, mint 0!");

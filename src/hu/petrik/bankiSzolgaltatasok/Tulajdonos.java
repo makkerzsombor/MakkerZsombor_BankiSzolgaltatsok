@@ -7,11 +7,11 @@ public final class Tulajdonos {
         this.nev = nev;
     }
 
-    public String getTulajdonos() {
+    public String getNev() {
         return nev;
     }
 
-    public void setTulajdonos(String nev) {
+    public void setNev(String nev) {
         this.nev = nev;
     }
 }
