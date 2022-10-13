@@ -27,5 +27,22 @@ public class Main {
         System.out.println("ossz egyenlegem: "+bank.getOsszegyenleg(peldaTulajdonos));
         szamla1.kivesz(15000);
         System.out.println("ossz egyenlegem kivonás után: "+bank.getOsszegyenleg(peldaTulajdonos));
+
+        System.out.println("Össz hitel keret: "+bank.getOsszhitelKeret());
+
+        HitelSzamla szamla2 = (HitelSzamla) bank.szamlanyitas(peldaTulajdonos, 9999);
+        szamla2.befizet(10000);
+        System.out.println("Legnagyobb értékű számlánk: "+bank.legnagyobbEgyenleguSzamla(peldaTulajdonos));
+
+        MegtakaritasiSzamla megtakaritasiSzamla2 = new MegtakaritasiSzamla(peldaTulajdonos);
+        System.out.println("Kamat: "+megtakaritasiSzamla2.getKamat());
+        megtakaritasiSzamla2.befizet(100);
+        megtakaritasiSzamla2.kamatJovairas();
+        System.out.println("Kamat jóváírás: "+megtakaritasiSzamla2.getAktualisEgyenleg());
+        megtakaritasiSzamla2.setKamat(1.2);
+        System.out.println("Kamat átírás: "+megtakaritasiSzamla2.getKamat());
+
+        megtakaritasiSzamla2.ujKartya("1234 8695 6571 1964");
+        System.out.println(kartya.getKartyaSzam());
     }
 }
