@@ -1,17 +1,17 @@
 package hu.petrik.bankiSzolgaltatasok;
 
 public final class Tulajdonos {
-    private String tulajdonos;
+    private String nev;
 
-    public Tulajdonos(String tulajdonos) {
-        this.tulajdonos = tulajdonos;
+    public Tulajdonos(String nev) {
+        this.nev = nev;
     }
 
     public String getTulajdonos() {
-        return tulajdonos;
+        return nev;
     }
 
     public void setTulajdonos(String tulajdonos) {
-        this.tulajdonos = tulajdonos;
+        this.nev = tulajdonos;
     }
 }
