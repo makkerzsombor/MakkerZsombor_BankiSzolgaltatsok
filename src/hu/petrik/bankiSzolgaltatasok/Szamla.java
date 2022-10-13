@@ -1,10 +1,10 @@
 package hu.petrik.bankiSzolgaltatasok;
 
-public abstract class Szamla {
+public abstract class Szamla extends BankiSzolgaltatas {
     protected int aktualisEgyenleg;
 
     public Szamla(Tulajdonos tulajdonos) {
-        this.aktualisEgyenleg = aktualisEgyenleg;
+        super(tulajdonos);
     }
 
     public int getAktualisEgyenleg() {
