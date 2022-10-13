@@ -11,7 +11,7 @@ public final class Tulajdonos {
         return nev;
     }
 
-    public void setTulajdonos(String tulajdonos) {
-        this.nev = tulajdonos;
+    public void setTulajdonos(String nev) {
+        this.nev = nev;
     }
 }
